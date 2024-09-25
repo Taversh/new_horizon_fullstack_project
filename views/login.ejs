@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/New Horizon logo worked on 2.0.png">
+    <title>New Horizons</title>
+    <style>
+           *{
+            font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(1, 10, 54);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px
+}
+
+
+.container{
+    background-color: rgba(255, 255, 255, 0.651);
+    padding: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    border-radius: 30px;
+}
+h3{
+    font-size: 1.6rem;
+    color: white;
+}
+img{
+    width: 80px;
+}
+
+.icon-div{
+    display: inline-flex;
+}
+
+.button{
+    width: 20%;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: rgba(13, 57, 255, 0.314);
+    color: white;
+    transition: background-color 1s;
+}
+.button:hover{
+    background-color: rgb(2, 71, 162);
+    color: white;
+    transition: background-color 1s;
+}
+.button:active{
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+input{
+    background-color: rgba(0, 0, 128, 0.316);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 40px;
+    width: 50%;
+    text-align: center;
+    outline: none;
+}
+.form-group{
+    margin-top: 20px;
+}
+.form-group input{
+    border-radius: 10px;
+    text-align: left;
+}
+.form-group input::placeholder{
+    color: rgba(255, 255, 255, 0.37);
+    text-align: left;
+}
+.create-account{
+    color: rgb(255, 255, 255);
+}
+    </style>
+</head>
+<body>
+    <form class="my-form" action="" method="post">
+        <div class="container">
+            <img src="/images/New Horizon logo worked on 2.0.png" alt="Icon">
+            <h3>New Horizons</h3>
+            <div class="form-group">
+                <input type="text" name="_username" id="_username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" name="_password" id="_password" placeholder="Password" >
+            </div>
+            <input class="button" type="submit" value="Submit">
+            <%if(typeof error !== 'undefined'){ %>
+                    <div class="err-msg"><%= error %></div>
+                <%}%>
+            <div>
+                <a class="create-account" href="/reg"><p class="create-account">Create an account</p></a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

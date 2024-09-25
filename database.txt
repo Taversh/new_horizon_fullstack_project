@@ -1,0 +1,50 @@
+
+C:\Users\BEAST JR>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 10.4.27-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> USE auth_db;
+Database changed
+MariaDB [auth_db]> SHOW TABLES;
+Empty set (0.040 sec)
+
+MariaDB [auth_db]> CREATE TABLE user_tbl(
+    -> id int(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -> username varchar(200) NOT NULL UNIQUE KEY,
+    -> email varchar(200) NOT NULL,
+    -> password varchar(200) NOT NULL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+MariaDB [auth_db]> CREATE TABLE user_tbl(
+    -> id int(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -> username varchar(200) NOT NULL UNIQUE KEY,
+    -> email varchar(200) NOT NULL UNIQUE KEY,
+    -> password varchar(200) NOT NULL
+    -> );
+Query OK, 0 rows affected (0.045 sec)
+
+MariaDB [auth_db]> ALTER TABLE user_tbl ADD date timestamp() NOT NULL
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') NOT NULL' at line 1
+MariaDB [auth_db]> ALTER TABLE user_tbl ADD date Timestamp NOT NULL
+    -> ;
+Query OK, 0 rows affected (0.059 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [auth_db]> DESCRIBE user_tbl;
++----------+--------------+------+-----+---------------------+-------------------------------+
+| Field    | Type         | Null | Key | Default             | Extra                         |
++----------+--------------+------+-----+---------------------+-------------------------------+
+| id       | int(20)      | NO   | PRI | NULL                | auto_increment                |
+| username | varchar(200) | NO   | UNI | NULL                |                               |
+| email    | varchar(200) | NO   | UNI | NULL                |                               |
+| password | varchar(200) | NO   |     | NULL                |                               |
+| date     | timestamp    | NO   |     | current_timestamp() | on update current_timestamp() |
++----------+--------------+------+-----+---------------------+-------------------------------+
+5 rows in set (0.011 sec)
+
+MariaDB [auth_db]>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/New Horizon logo worked on 2.0.png">
+    <title>New Horizons</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Poppins';
+            scroll-behavior: smooth;
+        }
+        section{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-bottom: solid rgba(17, 11, 210, 0.368) 2px  ;
+        }
+        section h1{
+            border-bottom: solid rgba(17, 11, 210, 0.368) 2px  ;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            padding-right: 10%;
+            padding-left: 10%;
+            box-shadow: 2px 5px 10px;
+            position: sticky;
+            top: 0px;
+            background-color: white;
+            z-index: 1;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .nav-bar-options li, ul a{
+            display: inline;
+            list-style: none;
+            color: navy;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        ul a:hover{
+            text-decoration: underline;
+        }
+        #about h1,
+        #gallery h1{
+            text-align: right;
+        }
+        .flexed-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .video-playback{
+            width: 25vw;
+            height: auto;
+            border-radius: 20px;
+            border: none;
+        }
+        .video-playback-container{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .writing-container{
+            text-align: start;
+            padding: 30px;
+        }
+        .fixed-sign-out{
+            position: fixed;
+            left: 80%;
+            top: 80%;
+            background-color: rgb(94, 142, 208);
+            padding: 20px;
+            border: none;
+            border-radius: 130px;
+        }
+        .fixed-sign-out h4{
+            color: rgb(232, 231, 231);
+        }
+        .logo{
+            width: 50px;
+        }
+        #contact-us img{
+            width: 20px;
+        }
+        .contact{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 30px;
+        }
+        .size-up{
+            font-size: .8rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="/index"><img class="logo" src="/images/New Horizon logo worked on 2.0.png" alt=""></a>
+        </div>
+        <div class="nav-bar-options">
+            <ul>
+                <a href="#home"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#services"><li>Services</li></a>
+                <a href="#gallery"><li>Gallery</li></a>
+                <a href="#contact-us"><li>Contact Us</li></a>
+            </ul>
+        </div>
+    </nav>
+    <section id="home"><div>
+        <h1>Home</h1>
+        <div class="flexed-container">
+            <div class="video-playback-container">
+                <video class="video-playback" src="/images/COMPTIA A+.mov" controls autoplay loop></video>
+            </div>
+            <div class="writing-container">
+                <h2>WELCOME</h2>
+                <p>This page is used to inform you about the various courses and activities being held by us and can also be used as an application website.</p>
+                <p>We Sincerely appreciate your visit and hope to see you soon 😊</p>
+                <br><br>
+                <p><----- This is a course we are currently holding called Comptia A+</p>
+            </div>
+        </div>
+    </div></section>
+    <section><div id="about">
+        <h1>About Us</h1>
+    </div></section>
+    <section><div id="services">
+        <h1>Services</h1>
+        
+    </div></section>
+    <section><div id="gallery">
+        <h1>Gallery</h1>
+    </div></section>
+    <section><div id="contact-us">
+        <h1>Contact Us</h1>
+        <div class="contact">
+            <div class="size-up">
+                <img src="images/fontawesome-free-6.3.0-web/svgs/brands/facebook.svg" alt="">
+                <img src="images/fontawesome-free-6.3.0-web/svgs/brands/twitter.svg" alt="">
+                <img src="images/fontawesome-free-6.3.0-web/svgs/brands/instagram.svg" alt="">
+                <p>nhnigeria</p>
+            </div>
+            <div class="size-up">
+                <img src="images/fontawesome-free-6.3.0-web/svgs/solid/phone.svg" alt="">
+                <p>07081626364</p>
+            </div>
+            <div class="size-up">
+                <img src="images/fontawesome-free-6.3.0-web/svgs/brands/linkedin.svg" alt="">
+                <p>www.linkedin.com/company/nhnigeria</p>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Fixed Sign out button on the screen -->
+    <div class="fixed-sign-out"><a href="/"><h4>Sign Out</h4></a></div>
+</body>
+</html>
